@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+        PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <listener>
+        <listener-class>
+            AppLifeCycleEvent
+        </listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>
+            AppAttributeEventDemo
+        </listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>
+            SessionLifeCycleEventDemo
+        </listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>Testing</servlet-name>
+        <servlet-class>TestingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Testing</servlet-name>
+        <url-pattern>/testing</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Primitive</servlet-name>
+        <servlet-class>PrimitiveServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Primitive</servlet-name>
+        <url-pattern>/primitive</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <servlet-class>ConfigDemoServlet</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>admin@brainysoftware.com</param-value>
+
+            <param-name>adminContactNumber</param-name>
+            <param-value>04298371237</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AttributeSetter</servlet-name>
+        <servlet-class>AttributeSetterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AttributeSetter</servlet-name>
+        <url-pattern>/set</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Response</servlet-name>
+        <servlet-class>ResponseDemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Response</servlet-name>
+        <url-pattern>/response</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Request</servlet-name>
+        <servlet-class>RequestDemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Request</servlet-name>
+        <url-pattern>/req</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RespondHtml</servlet-name>
+        <servlet-class>ResponseServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RespondHtml</servlet-name>
+        <url-pattern>/respondhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SimpleServlet</servlet-name>
+        <servlet-class>SimpleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SimpleServlet</servlet-name>
+        <url-pattern>/simpleservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SingleThreadedServlet</servlet-name>
+        <servlet-class>SingleThreadedServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SingleThreadedServlet</servlet-name>
+        <url-pattern>/singlethreaded</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HTTPHeaders</servlet-name>
+        <servlet-class>HTTPHeadersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HTTPHeaders</servlet-name>
+        <url-pattern>/headers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RequestString</servlet-name>
+        <servlet-class>HttpRequestDemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RequestString</servlet-name>
+        <url-pattern>/requeststring</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MultipleValues</servlet-name>
+        <servlet-class>MultipleValuesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MultipleValues</servlet-name>
+        <url-pattern>/multiplevalues</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>FirstServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/firstservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FirstServletI</servlet-name>
+        <servlet-class>FirstServletInclude</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FirstServletI</servlet-name>
+        <url-pattern>/firstservleti</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SecondServletI</servlet-name>
+        <servlet-class>SecondServletInclude</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SecondServletI</servlet-name>
+        <url-pattern>/secondservleti</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginForward</servlet-name>
+        <servlet-class>LoginServletForward</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginForward</servlet-name>
+        <url-pattern>/loginforward</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>WelcomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/welcomeservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieServlet</servlet-name>
+        <servlet-class>CookieServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CookieServlet</servlet-name>
+        <url-pattern>/cookieservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieLoginServlet</servlet-name>
+        <servlet-class>CookieServletLogin</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CookieLoginServlet</servlet-name>
+        <url-pattern>/cookieloginservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContentServlet</servlet-name>
+        <servlet-class>ContentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContentServlet</servlet-name>
+        <url-pattern>/contentservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckCookieServlet</servlet-name>
+        <servlet-class>CheckCookieServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CheckCookieServlet</servlet-name>
+        <url-pattern>/checkcookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionLoginServlet</servlet-name>
+        <servlet-class>SessionLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SessionLoginServlet</servlet-name>
+        <url-pattern>/sessionloginservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Content2Servlet</servlet-name>
+        <servlet-class>Content2Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Content2Servlet</servlet-name>
+        <url-pattern>/content2servlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AppEvent</servlet-name>
+        <servlet-class>ApplicationEventDemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AppEvent</servlet-name>
+        <url-pattern>/applicationevent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PageCounterServlet</servlet-name>
+        <servlet-class>PageCounterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PageCounterServlet</servlet-name>
+        <url-pattern>/countpage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserCounterServlet</servlet-name>
+        <servlet-class>UserCounterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserCounterServlet</servlet-name>
+        <url-pattern>/countusers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FilteredServlet</servlet-name>
+        <servlet-class>FilteredServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FilteredServlet</servlet-name>
+        <url-pattern>/filteredservlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>BasicFilter</filter-name>
+        <filter-class>BasicFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>BasicFilter</filter-name>
+        <servlet-name>FilteredServlet</servlet-name>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LoggingFilter</filter-name>
+        <filter-class>LoggingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoggingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>TrimFilteredServlet</servlet-name>
+        <servlet-class>TrimFilteredServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TrimFilteredServlet</servlet-name>
+        <url-pattern>/trimfilteredservlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>TrimFilter</filter-name>
+        <filter-class>TrimFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>TrimFilter</filter-name>
+        <servlet-name>TrimFilteredServlet</servlet-name>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>ResponseFilteredServlet</servlet-name>
+        <servlet-class>ResponseFilterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResponseFilteredServlet</servlet-name>
+        <url-pattern>/responsefilteredservlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>ResponseFilter</filter-name>
+        <filter-class>ResponseFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ResponseFilter</filter-name>
+        <servlet-name>ResponseFilteredServlet</servlet-name>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>DoublyFilteredServlet</servlet-name>
+        <servlet-class>DoublyFilteredServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DoublyFilteredServlet</servlet-name>
+        <url-pattern>/doublyfilteredservlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>UpperCaseFilter</filter-name>
+        <filter-class>UpperCaseFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>UpperCaseFilter</filter-name>
+        <servlet-name>DoublyFilteredServlet</servlet-name>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>TrimFilter</filter-name>
+        <servlet-name>DoublyFilteredServlet</servlet-name>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>DBLoginServlet</servlet-name>
+        <servlet-class>DBLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DBLoginServlet</servlet-name>
+        <url-pattern>/dblogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DBRegistrationServlet</servlet-name>
+        <servlet-class>DBRegistrationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DBRegistrationServlet</servlet-name>
+        <url-pattern>/dbreg</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BeerExpert</servlet-name>
+        <servlet-class>BeerExpert</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BeerExpert</servlet-name>
+        <url-pattern>/BeerExp</url-pattern>
+    </servlet-mapping>
+
+</web-app>

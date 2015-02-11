@@ -1,0 +1,14 @@
+/**
+ * Created by Madalin.Colezea on 7/11/2014.
+ */
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import java.util.*;
+public class FirstServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher rd = request.getRequestDispatcher("/AdBanner.html");
+        rd.include(request, response);
+    }
+}
